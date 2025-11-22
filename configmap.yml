@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: counterapp-config
+  namespace: ns-dev
+data:
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://counter-db:5432/counterdb"
