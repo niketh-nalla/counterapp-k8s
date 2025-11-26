@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: counter-app
+  name: counter-app-green
   namespace: ns-dev
   labels:
-    app: counter-app
-    version: v1
+    app: counter-app-green
+    version: v2
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: counter-app
-      version: v1
+      version: v2
   template:
     metadata:
       labels:
         app: counter-app
-        version: v1
+        version: v2
     spec:
       containers:
         - name: counterapp
-          image: counterapp:1.0.0
+          image: counterapp:2.0.0
           ports:
             - containerPort: 8080
           env:
